@@ -5,11 +5,61 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container">
+    <a class="navbar-brand" href="../study_items">HOME</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        
+       <li class="nav-item active">
+          <a class="nav-link" href="../study_items/.">Tópicos de estudo</a>
+       </li>
+
+        <li class="nav-item active">
+          <a class="nav-link" href="../study_items">Categorias de estudo</a>
+        </li>
+
+        <li class="nav-item active">
+          <a class="nav-link" href="../study_items/">Meu progresso</a>
+        </li>
+
+        <li class="nav-item active">
+          <a class="nav-link" href="../study_items/">Meus prazos</a>
+        </li>
+
+        <li class="nav-item active">
+          <a class="nav-link" href="../study_items/.">LOGIN</a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <%= yield %>
+</div>
+
+<footer>
+  <div class="container">
+    <br>
+    <br>
+    <br>
+    ANA FELIZATTI - QSD GIRLS <%= Time.now.year %>
+  </div>
+</footer>
+
   </body>
+
 </html>
