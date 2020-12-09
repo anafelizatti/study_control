@@ -14,8 +14,11 @@ e definir suas categorias, além de atribuir prazos de estudo e acompanhar seu p
 <table>
   <thead>
     <tr>
+      <th>ID</th>
       <th>Item</th>
       <th>Categoria</th>
+      <th>Descrição</th>
+      <th>Prazo</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -23,8 +26,11 @@ e definir suas categorias, além de atribuir prazos de estudo e acompanhar seu p
   <tbody>
     <% @study_items.each do |study_item| %>
       <tr>
+        <td><%= study_item.id %></td>
         <td><%= study_item.title %></td>
         <td><%= study_item.category %></td>
+        <td><%= study_item.description %></td>
+        <td><%= study_item.deadline %></td>
         <td><%= link_to 'Mostrar', study_item %></td>
         <td><%= link_to 'Editar', edit_study_item_path(study_item) %></td>
         <td><%= link_to 'Deletar', study_item, method: :delete, data: { confirm: 'Você está certo disso?' } %></td>

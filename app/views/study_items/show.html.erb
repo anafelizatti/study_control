@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Item de estudo:</strong>
+  <strong>Item de estudo :</strong>
   <%= @study_item.title %>
 </p>
 <br>
@@ -9,8 +9,16 @@
   <strong>Categoria do item:</strong>
   <%= @study_item.category %>
 </p>
-
-#adicionar descrição e prazo
+<br>
+<p>
+  <strong>Descrição do item:</strong>
+  <%= @study_item.description %>
+</p>
+<br>
+<p>
+  <strong>Prazo do item:</strong>
+  <%= @study_item.deadline %>
+</p>
 
 <%= link_to 'Editar', edit_study_item_path(@study_item) %> |
 <%= link_to 'Voltar', study_items_path %>
