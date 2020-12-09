@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Item de estudo:</strong>
+  <%= @study_item.title %>
+</p>
+<br>
+<p>
+  <strong>Categoria do item:</strong>
+  <%= @study_item.category %>
+</p>
+
+<%= link_to 'Editar', edit_study_item_path(@study_item) %> |
+<%= link_to 'Voltar', study_items_path %>
