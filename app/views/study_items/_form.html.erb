@@ -17,10 +17,11 @@
     <%= form.text_field :title %>
   </div>
 
-  <div class="field">
-    <%= form.label "Categoria" %>
-    <br>
-    <%= form.text_field :category %>
+  <div class="control-group">
+    <%= form.label "Categorias",class: 'control-group' %>
+    <div class="controls">
+      <%= collection_select( :study_item, :category_id, StudyCategory.all, :id, :title, {}, { :multiple => false} ) %>
+    </div>
   </div>
 
   <div class="field">
