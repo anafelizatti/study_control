@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @study_category.title %>
+</p>
+
+<%= link_to 'Editar', edit_study_category_path(@study_category) %> |
+<%= link_to 'Voltar', study_categories_path %>
