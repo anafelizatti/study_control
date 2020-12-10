@@ -1,7 +1,7 @@
 <%= form_with(model: study_item, local: true) do |form| %>
   <% if study_item.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(study_item.errors.count, "error") %> prohibited this study_item from being saved:</h2>
+      <h2><%= pluralize(study_item.errors.count, "ERRO") %> Ação não concluída:</h2>
 
       <ul>
         <% study_item.errors.full_messages.each do |message| %>
@@ -18,7 +18,7 @@
   </div>
 
   <div class="control-group">
-    <%= form.label "Categorias",class: 'control-group' %>
+    <%= form.label "Categorias",class: 'control-label' %>
     <div class="controls">
       <%= collection_select( :study_item, :category_id, StudyCategory.all, :id, :title, {}, { :multiple => false} ) %>
     </div>
