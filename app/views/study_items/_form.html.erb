@@ -13,25 +13,33 @@
 
   <div class="field">
     <%= form.label "Item" %>
+    <br>
     <%= form.text_field :title %>
   </div>
 
   <div class="field">
     <%= form.label "Categoria" %>
+    <br>
     <%= form.text_field :category %>
   </div>
 
   <div class="field">
     <%= form.label "Descrição" %>
+    <br>
     <%= form.text_field :description %>
   </div>
 
   <div class="field">
     <%= form.label "Prazo" %>
+    </br>
     <%= form.text_field :deadline %>
+    <br>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <br>
+    <%= form.submit 'Cadastrar item' %>
+    <hr>
   </div>
+  
 <% end %>

@@ -14,11 +14,14 @@ e definir suas categorias, além de atribuir prazos de estudo e acompanhar seu p
 <table>
   <thead>
     <tr>
-      <th>ID</th>
       <th>Item</th>
+      <td></td>
       <th>Categoria</th>
+      <td></td>
       <th>Descrição</th>
+      <td></td>
       <th>Prazo</th>
+      <td></td>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -26,15 +29,28 @@ e definir suas categorias, além de atribuir prazos de estudo e acompanhar seu p
   <tbody>
     <% @study_items.each do |study_item| %>
       <tr>
-        <td><%= study_item.id %></td>
-        <td><%= study_item.title %></td>
-        <td><%= study_item.category %></td>
-        <td><%= study_item.description %></td>
+        <td><%= study_item.title.titlecase! %></td>
+        <td></td>
+        <td><%= study_item.category.titlecase! %></td>
+        <td></td>
+        <td><%= study_item.description.titlecase! %></td>
+        <td></td>
         <td><%= study_item.deadline %></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
         <td><%= link_to 'Mostrar', study_item %></td>
+        <td></td>
+        <td></td>
         <td><%= link_to 'Editar', edit_study_item_path(study_item) %></td>
+        <td></td>
+        <td></td>
         <td><%= link_to 'Deletar', study_item, method: :delete, data: { confirm: 'Você está certo disso?' } %></td>
-      </tr>
+        </tr>
     <% end %>
   </tbody>
 </table>

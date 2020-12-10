@@ -1,24 +1,4 @@
-# README
+Projeto Diário de Estudos - Ruby on Rails - QSD Girls 2020
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Esta aplicação é um diário de estudos. 
+Através dela é possível cadastrar tópicos de estudo com comentáriose e definir suas categorias, além de atribuir prazos de estudo e acompanhar o progresso.
