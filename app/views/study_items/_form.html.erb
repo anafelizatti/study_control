@@ -37,6 +37,13 @@
     <br>
   </div>
 
+  <div class="control-group">
+    <%= form.label "Status", class: 'control-label' %>
+    </br>
+    <%= select("study_item", "status", ['Pendente', 'Concluído'], {include_blank: false}) %></td>
+    <br>
+  </div>
+
   <div class="actions">
     <br>
     <%= form.submit 'Cadastrar item' %>

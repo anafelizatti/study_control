@@ -20,5 +20,11 @@
   <%= @study_item.deadline %>
 </p>
 
+<br>
+<p>
+  <strong>Status :</strong>
+  <%= @study_item.status %>
+</p>
+
 <%= link_to 'Editar', edit_study_item_path(@study_item) %> |
 <%= link_to 'Voltar', study_items_path %>
