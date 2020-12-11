@@ -30,7 +30,7 @@ e definir suas categorias, além de atribuir prazos de estudo e acompanhar seu p
   <tbody>
     <% @study_items.each do |study_item| %>
       <tr>
-        <td><%= study_item.title.upcase %></td>
+        <td><%= link_to study_item.title.upcase, study_item %></td>
         <td></td>
         <td><%= study_item.category_id %></td>
         <td></td>
@@ -42,8 +42,6 @@ e definir suas categorias, além de atribuir prazos de estudo e acompanhar seu p
         <td></td>
         <td></td>
         <td></td>
-        <td></td>
-        <td><%= link_to 'Mostrar', study_item %></td>
         <td></td>
         <td></td>
         <td><%= link_to 'Editar', edit_study_item_path(study_item) %></td>

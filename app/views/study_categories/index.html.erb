@@ -1,12 +1,15 @@
 <p id="notice"><%= notice %></p>
 
-<h2>Categorias de estudo</h2>
+<h4>Categorias de estudo</h4>
 <hr>
 
-<table>
+<center><table width="50%">
   <thead>
     <tr>
       <th>CATEGORIA</th>
+      <td></td>
+      <td></td>
+      <td></td>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,15 +17,15 @@
   <tbody>
     <% @study_categories.each do |study_category| %>
       <tr>
-        <td><%= study_category.title %></td>
-        <td><%= link_to 'MOSTRAR', study_category %></td>
+        <td><%= link_to study_category.title.upcase, study_category %></td>
+        <td></td>
         <td><%= link_to 'EDITAR', edit_study_category_path(study_category) %></td>
         <td><%= link_to 'DELETAR', study_category, method: :delete, data: { confirm: 'Você está certo disso?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
 <br>
-
+<hr>
 <%= link_to 'Adicionar categoria', new_study_category_path %>
+</center>
