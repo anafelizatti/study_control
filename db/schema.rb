@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_11_121551) do
+ActiveRecord::Schema.define(version: 2020_12_12_121826) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 2020_12_11_121551) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "description"
     t.string "deadline"
-    t.integer "category_id"
+    t.string "category_id"
     t.string "status"
   end
 

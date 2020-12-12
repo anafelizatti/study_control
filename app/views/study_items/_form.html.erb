@@ -20,7 +20,7 @@
   <div class="control-group">
     <%= form.label "Categorias",class: 'control-label' %>
     <div class="controls">
-      <%= collection_select( :study_item, :category_id, StudyCategory.all, :id, :title, {}, { :multiple => false} ) %>
+      <%= collection_select( :study_item, :category_id, StudyCategory.all, :title, :title, {}, { :multiple => false} ) %>
     </div>
   </div>
 
