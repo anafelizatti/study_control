@@ -14,20 +14,14 @@
   <div class="field">
     <%= form.label "Item" %>
     <br>
-    <%= form.text_field :title %>
+    <%= form.text_field :title, :size=>"28" %>
   </div>
 
   <div class="control-group">
-    <%= form.label "Categorias",class: 'control-label' %>
+    <%= form.label "Categorias",class: 'control-label'  %>
     <div class="controls">
       <%= collection_select( :study_item, :category_id, StudyCategory.all, :title, :title, {}, { :multiple => false} ) %>
     </div>
-  </div>
-
-  <div class="field">
-    <%= form.label "Descrição" %>
-    <br>
-    <%= form.text_field :description %>
   </div>
 
   <div class="field">
@@ -35,6 +29,12 @@
     </br>
     <%= form.text_field :deadline %>
     <br>
+  </div>
+
+  <div class="field">
+    <%= form.label "Descrição" %>
+    <br>
+    <%= form.text_area :description, :size=>"30" %>
   </div>
 
   <div class="control-group">

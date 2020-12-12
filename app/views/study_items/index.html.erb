@@ -7,8 +7,11 @@
 
 <hr>
 <p> <i> Esta aplicação é um diário de estudos. Através dela é possível cadastrar tópicos de estudo com comentários
-e definir suas categorias, além de atribuir prazos de estudo e acompanhar seu progresso! </i> </p>
+e definir suas categorias, além de atribuir prazos de estudo para monitorar seu progresso! </i> </p>
 <hr>
+<br>
+
+<center> <h6> MEUS ITEMS CADASTRADOS </h6> </center>
 <br>
 
 <table width="100%">
@@ -18,9 +21,9 @@ e definir suas categorias, além de atribuir prazos de estudo e acompanhar seu p
       <td></td>
       <th>Categoria</th>
       <td></td>
-      <th>Descrição</th>
-      <td></td>
       <th>Prazo</th>
+      <td></td>
+      <th>Descrição</th>
       <td></td>
       <th>Status</th>
       <th colspan="3"></th>
@@ -34,9 +37,9 @@ e definir suas categorias, além de atribuir prazos de estudo e acompanhar seu p
         <td></td>
         <td><%= study_item.category_id %></td>
         <td></td>
-        <td><%= study_item.description.upcase %></td>
-        <td></td>
         <td><%= study_item.deadline %></td>
+        <td></td>
+        <td><%= study_item.description %></td>
         <td></td>
         <td><%= study_item.status %></td>
         <td></td>

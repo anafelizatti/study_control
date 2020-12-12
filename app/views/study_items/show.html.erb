@@ -11,20 +11,19 @@
 </p>
 <br>
 <p>
+  <strong>Prazo :</strong>
+  <%= @study_item.deadline %>
+</p>
+<br>
+<p>
   <strong>Descrição :</strong>
   <%= @study_item.description %>
 </p>
 <br>
 <p>
-  <strong>Prazo :</strong>
-  <%= @study_item.deadline %>
-</p>
-
-<br>
-<p>
   <strong>Status :</strong>
   <%= @study_item.status %>
 </p>
-
+<hr>
 <%= link_to 'Editar', edit_study_item_path(@study_item) %> |
-<%= link_to 'Voltar', study_items_path %>
+<%= link_to 'Página inicial', study_items_path %>

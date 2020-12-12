@@ -1,7 +1,7 @@
 <%= form_with(model: study_category, local: true) do |form| %>
   <% if study_category.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(study_category.errors.count, "error") %> prohibited this study_category from being saved:</h2>
+      <h2><%= pluralize(study_category.errors.count, "Erro") %> Não foi possível salvar:</h2>
 
       <ul>
         <% study_category.errors.full_messages.each do |message| %>
@@ -19,7 +19,7 @@
 
   <div class="actions">
     <br>
-    <%= form.submit 'Cadastrar categoria' %>
+    <%= form.submit 'Cadastrar nova categoria' %>
     <hr>
   </div>
 
