@@ -10,8 +10,8 @@ Funcionalidades básicas:
 2. Editar um item de estudo ok.
 3. Apagar um item de estudo ok.
 4. Marcar um item de estudo como feito ok.
-5. Definir um prazo para conclusão de um item de estudo ok.
-6. Comentar um item de estudo
+5. Definir um prazo para conclusão de um item de estudo ok +-
+6. Comentar um item de estudo 
 7. Cadastrar categorias para itens de estudo pré-definidas ok.
 8. Usar categorias em itens de estudo ok.
 
