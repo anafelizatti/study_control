@@ -1,29 +1,31 @@
 <p id="notice"><%= notice %></p>
 
+<hr>
+<strong>
+  <p style ="color:CadetBlue;"> Detalhes de item de estudo  </p>
+</strong>
+<hr>
+
 <p>
   <strong>Item de estudo :</strong>
   <%= @study_item.title %>
 </p>
-<br>
 <p>
   <strong>Categoria :</strong>
   <%= @study_item.category_id %>
 </p>
-<br>
 <p>
   <strong>Prazo :</strong>
   <%= @study_item.deadline %>
 </p>
-<br>
 <p>
   <strong>Descrição :</strong>
   <%= @study_item.description %>
 </p>
-<br>
 <p>
   <strong>Status :</strong>
   <%= @study_item.status %>
 </p>
 <hr>
-<%= link_to 'Editar', edit_study_item_path(@study_item) %> |
+<%= link_to 'Alterar', edit_study_item_path(@study_item) %> |
 <%= link_to 'Página inicial', study_items_path %>

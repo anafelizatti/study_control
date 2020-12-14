@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<h4>Categorias de estudo</h4>
+<hr>
+<strong>
+  <p style ="color:CadetBlue;"> Categorias de estudo  </p>
+</strong>
+<hr>
+
 <hr>
 
 <center><table width="50%">
@@ -19,13 +24,13 @@
       <tr>
         <td><%= link_to study_category.title.upcase, study_category %></td>
         <td></td>
-        <td><%= link_to 'EDITAR', edit_study_category_path(study_category) %></td>
-        <td><%= link_to 'DELETAR', study_category, method: :delete, data: { confirm: 'Você está certo disso?' } %></td>
+        <td><%= link_to 'Alterar', edit_study_category_path(study_category) %></td>
+        <td><%= link_to 'Deletar', study_category, method: :delete, data: { confirm: 'Você está certo disso?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 <br>
 <hr>
-<%= link_to 'Adicionar categoria', new_study_category_path %>
+<strong><%= link_to 'Adicionar nova categoria', new_study_category_path %></strong>
 </center>
