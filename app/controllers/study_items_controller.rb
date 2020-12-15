@@ -20,11 +20,9 @@ class StudyItemsController < ApplicationController
 
     respond_to do |format|
       if @study_item.save
-        format.html { redirect_to @study_item, notice: 'Item criado! Vamos estudar :) .' }
-        format.json { render :show, status: :created, location: @study_item }
+        format.html { redirect_to @study_item, notice: 'Item criado! Vamos estudar :).' }
       else
-        format.html { render :new }
-        format.json { render json: @study_item.errors, status: :unprocessable_entity }
+        format.html{ render :new }
       end
     end
   end
@@ -33,10 +31,8 @@ class StudyItemsController < ApplicationController
     respond_to do |format|
       if @study_item.update(study_item_params)
         format.html { redirect_to @study_item, notice: 'O tópico foi atualizado com sucesso.' }
-        format.json { render :show, status: :ok, location: @study_item }
       else
         format.html { render :edit }
-        format.json { render json: @study_item.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -45,7 +41,7 @@ class StudyItemsController < ApplicationController
     @study_item.destroy
     respond_to do |format|
       format.html { redirect_to study_items_url, notice: 'O tópico foi deletado.' }
-      format.json { head :no_content }
+
     end
   end
 

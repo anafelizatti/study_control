@@ -1,15 +1,14 @@
-<%= form_with(model: study_category, local: true) do |form| %>
-  <% if study_category.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(study_category.errors.count, "Erro") %> Não foi possível salvar:</h2>
+<% if study_category.errors.any? %>
+<div id="error_explanation">
+<p style ="color:Red;">Atenção! Ação não concluída:<p>
+    <% study_category.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+      <hr>
+    <% end %>
+</div>
+<% end %>
 
-      <ul>
-        <% study_category.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+<%= form_with(model: study_category, local: true) do |form| %>
 
   <div class="field">
     <%= form.label "Categoria" %>
