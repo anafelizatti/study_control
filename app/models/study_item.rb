@@ -1,3 +1,3 @@
 class StudyItem < ApplicationRecord
-    validates :title, presence: true
+    validates :title, presence: { message: 'Não pode estar em branco.'}
 end
