@@ -29,6 +29,9 @@ e definir suas categorias, além de atribuir prazos de estudo para monitorar seu
       <th>Descrição</th>
       <td></td>
       <th>Status</th>
+      <td></td>
+      <th><i><center>Alterar status</center></i></th>
+      
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -46,14 +49,17 @@ e definir suas categorias, além de atribuir prazos de estudo para monitorar seu
         <td></td>
         <td><%= study_item.status %></td>
         <td></td>
+        <td><strong><%= link_to 'Concluído', concluded_study_item_path(study_item), method: :post %></td></strong>
+        <td><strong><%= link_to 'Pendente', unconcluded_study_item_path(study_item), method: :post %></td></strong>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
         <td><%= link_to 'Editar', edit_study_item_path(study_item) %></td>
         <td></td>
-        <td></td>
         <td><%= link_to 'Deletar', study_item, method: :delete, data: { confirm: 'Você está certo disso?' } %></td>
+        <td></td>
+
         </tr>
     <% end %>
   </tbody>
