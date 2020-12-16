@@ -28,5 +28,33 @@
 </p>
 <hr>
 
+<h2>Comments</h2>
+<% @study_item.study_comments.each do |comment| %>
+  <p>
+    <strong>Commenter:</strong>
+    <%= comment.commenter %>
+  </p>
+
+  <p>
+    <strong>Comment:</strong>
+    <%= comment.body %>
+  </p>
+<% end %>
+
+<p>Add a comment:<p>
+<%= form_with(model: [ @study_item, @study_item.study_comments.build ], local: true) do |form| %>
+  <p>
+    <%= form.label :commenter %><br>
+    <%= form.text_field :commenter %>
+  </p>
+  <p>
+    <%= form.label :body %><br>
+    <%= form.text_area :body %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+
 <%= link_to 'Alterar', edit_study_item_path(@study_item) %> |
 <%= link_to 'Página inicial', study_items_path %>

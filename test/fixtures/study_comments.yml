@@ -1,7 +1,11 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  notes: MyText
+  commenter: MyString
+  body: MyText
+  study_item: one
 
 two:
-  notes: MyText
+  commenter: MyString
+  body: MyText
+  study_item: two

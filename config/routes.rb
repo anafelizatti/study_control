@@ -8,4 +8,8 @@ Rails.application.routes.draw do
     post 'unconcluded', on: :member
   end
   
+  resources :study_items do
+    resources :study_comments
+  end
+
 end
