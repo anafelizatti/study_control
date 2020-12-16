@@ -1,15 +1,17 @@
 <p>
-<strong>Commenter:</strong>
+<strong>Usuário:</strong>
 <%= study_comment.commenter %>
 </p>
 
 <p>
-<strong>Comment:</strong>
+<strong>Comentário:</strong>
 <%= study_comment.body %>
 </p>
 
 <p>
-  <%= link_to 'Deletar comentário', [study_comment.study_item, study_comment],
+  <%= link_to "Deletar comentário de " + study_comment.commenter, [study_comment.study_item, study_comment],
                method: :delete,
                data: { confirm: 'Você tem certeza?' } %>
 </p>
+
+<hr>

@@ -28,12 +28,19 @@
 </p>
 <hr>
 
-<h2>Comments</h2>
+<strong><center><%= link_to 'Alterar item', edit_study_item_path(@study_item) %> |
+<%= link_to 'Página inicial', study_items_path %></center></strong>
+
+<hr>
+<strong>
+  <center> <h4 style ="color:CadetBlue;"> Comentários  </h4></center>
+</strong>
+<hr>
 <%= render @study_item.study_comments %>
 
 
-<p>Add a comment:</p>
+<center><i><p>Adicione um comentário</p></i>
 <%= render 'study_comments/form' %>
+<hr></center>
 
-<%= link_to 'Alterar', edit_study_item_path(@study_item) %> |
-<%= link_to 'Página inicial', study_items_path %>
+<center><%= link_to 'HOME', study_items_path %></center></strong></center>
