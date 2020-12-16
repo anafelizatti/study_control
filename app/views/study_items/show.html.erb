@@ -27,5 +27,9 @@
   <%= @study_item.status %>
 </p>
 <hr>
+
+<%= link_to 'Comentário', new_study_comment_path(@study_item), class: 'btn bt-primary' %>
+
+<hr>
 <%= link_to 'Alterar', edit_study_item_path(@study_item) %> |
 <%= link_to 'Página inicial', study_items_path %>

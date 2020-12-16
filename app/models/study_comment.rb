@@ -1,0 +1,2 @@
+class StudyComment < ApplicationRecord
+end
