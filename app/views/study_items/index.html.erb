@@ -66,5 +66,14 @@ e definir suas categorias, além de atribuir prazos de estudo para monitorar seu
 </table>
 
 <br>
-
-<%= link_to 'Cadastrar um novo item', new_study_item_path %>
+<hr>
+<center><%= link_to 'Cadastrar um novo item', new_study_item_path %></center>
+<hr>
+<h6>Buscar item ou categoria</h6>
+<%= form_with url: search_path, method: :get do %>
+  <%= label_tag%>
+  <%= text_field_tag :q %>
+  <br>
+  <br>
+  <%= submit_tag 'Pesquisar' %>
+<% end %>

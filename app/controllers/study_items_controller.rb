@@ -1,5 +1,5 @@
 class StudyItemsController < ApplicationController
-  before_action :set_study_item, only: %i[show edit update destroy concluded unconcluded]
+  before_action :set_study_item, only: %i[show edit update destroy concluded unconcluded search]
 
   def show;end
   def edit;end
@@ -45,6 +45,12 @@ class StudyItemsController < ApplicationController
     @study_item.save
     redirect_to study_items_path
   end
+
+  def search 
+    @study_items = StudyItem.where('title like ? OR category_id like ?',
+  "%#{params[:q]}%", "%#{params[:q]}%")
+  end
+
 
   private
     def set_study_item

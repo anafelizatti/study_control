@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   root to: 'study_items#index'
-
+  
+  resources :study_items do
+    get 'search', to:'study_items#search'
+  end
+  
   resources :study_categories
 
   resources :study_items do
