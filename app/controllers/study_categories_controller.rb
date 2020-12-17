@@ -16,31 +16,24 @@ class StudyCategoriesController < ApplicationController
 
   def create
     @study_category = StudyCategory.new(study_category_params)
-
-    respond_to do |format|
       if @study_category.save
-        format.html { redirect_to @study_category, notice: 'Uma nova categoria foi definida.' }
+        redirect_to @study_category
       else
-        format.html { render :new }
+        render :new
       end
-    end
   end
 
   def update
-    respond_to do |format|
       if @study_category.update(study_category_params)
-        format.html { redirect_to @study_category, notice: 'Categoria atualizada.' }
+        redirect_to @study_category
       else
-        format.html { render :edit }
+        render :edit
       end
-    end
   end
 
   def destroy
     @study_category.destroy
-    respond_to do |format|
-      format.html { redirect_to study_categories_url, notice: 'Categoria removida.' }
-    end
+    redirect_to study_categories_url
   end
 
   private
