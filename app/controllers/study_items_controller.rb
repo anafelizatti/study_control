@@ -1,28 +1,15 @@
 class StudyItemsController < ApplicationController
   before_action :set_study_item, only: %i[show edit update destroy concluded unconcluded]
 
+  def show;end
+  def edit;end
+
   def index
     @study_items = StudyItem.all
   end
 
-  def show;end
-
   def new
     @study_item = StudyItem.new
-  end
-
-  def edit;end
-
-  def concluded
-    @study_item.status = ' ✔ Concluído'
-    @study_item.save
-    redirect_to study_items_path
-  end
-
-  def unconcluded
-    @study_item.status = ' ❌ Pendente'
-    @study_item.save
-    redirect_to study_items_path
   end
 
   def create
@@ -45,6 +32,18 @@ class StudyItemsController < ApplicationController
   def destroy
     @study_item.destroy
     redirect_to study_items_url
+  end
+
+  def concluded
+    @study_item.status = ' ✔ Concluído'
+    @study_item.save
+    redirect_to study_items_path
+  end
+
+  def unconcluded
+    @study_item.status = ' ❌ Pendente'
+    @study_item.save
+    redirect_to study_items_path
   end
 
   private

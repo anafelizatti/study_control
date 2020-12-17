@@ -1,18 +1,16 @@
 class StudyCategoriesController < ApplicationController
   before_action :set_study_category, only: [:show, :edit, :update, :destroy]
 
-  
+  def edit; end
+  def show; end
+
   def index
     @study_categories = StudyCategory.all
   end
 
-  def show; end
-
   def new
     @study_category = StudyCategory.new
   end
-
-  def edit; end
 
   def create
     @study_category = StudyCategory.new(study_category_params)
