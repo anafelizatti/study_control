@@ -14,8 +14,13 @@ e definir suas categorias, além de atribuir prazos de estudo para monitorar seu
 <hr>
 <br>
 
-<center> <h6> MEUS ITEMS CADASTRADOS </h6> </center>
+<center> <h6> MEUS ITEMS</h6> </center>
 <br>
+<div style="text-align: right;"><%= form_tag(study_items_path, method: :get) do %>
+  <%= text_field_tag 'search', nil, placeholder: 'Pesquise um termo' %>
+  <%= submit_tag 'Pesquisar' %>
+<% end %></div>
+<hr>
 
 <table width="100%">
   <thead>
@@ -69,11 +74,3 @@ e definir suas categorias, além de atribuir prazos de estudo para monitorar seu
 <hr>
 <center><%= link_to 'Cadastrar um novo item', new_study_item_path %></center>
 <hr>
-<h6>Buscar item ou categoria</h6>
-<%= form_with url: search_path, method: :get do %>
-  <%= label_tag%>
-  <%= text_field_tag :q %>
-  <br>
-  <br>
-  <%= submit_tag 'Pesquisar' %>
-<% end %>
