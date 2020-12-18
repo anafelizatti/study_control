@@ -20,5 +20,5 @@ Bônus:
 1. Itens de estudo podem ter um tipo (texto, vídeo, curso)
 2. Exibir cada tópico de acordo com a data - indicando itens atrasados/futuro
 3. Adicionar ícones para os tipos de itens de estudo
-4. Buscar tópico de estudo
+4. Buscar tópico de estudo ok!
 5. Login
