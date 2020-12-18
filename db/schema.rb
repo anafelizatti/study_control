@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_18_165338) do
+ActiveRecord::Schema.define(version: 2020_12_18_230448) do
 
   create_table "study_categories", force: :cascade do |t|
     t.string "title"
@@ -35,8 +35,6 @@ ActiveRecord::Schema.define(version: 2020_12_18_165338) do
     t.date "deadline"
     t.string "category_id"
     t.string "status"
-    t.date "date_today"
-    t.string "deadline_check"
   end
 
   add_foreign_key "study_comments", "study_items"
