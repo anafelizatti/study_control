@@ -39,12 +39,14 @@ class StudyItemsController < ApplicationController
   end
 
   def concluded
+    @study_item.update(finalized_at: Date.current)
     @study_item.status = ' ✔ Concluído'
     @study_item.save
     redirect_to study_items_path
   end
 
   def unconcluded
+    @study_item.update(finalized_at:'')
     @study_item.status = ' ❌ Pendente'
     @study_item.save
     redirect_to study_items_path

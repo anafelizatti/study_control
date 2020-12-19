@@ -28,6 +28,12 @@
 </p>
 <hr>
 
+<% if @study_item.finalized? && @study_item.status = '✔ Concluído'%>
+<p>Finalizada em <%= @study_item.finalized_at %> </p>
+<% elsif @study_item.status = '❌ Pendente'%>
+<%= link_to 'Marcar como feito', concluded_study_item_path(@study_item), method: :post %> </center></strong>
+<% end %> 
+
 <strong><center><%= link_to 'Alterar item', edit_study_item_path(@study_item) %> |
 <%= link_to 'Página inicial', study_items_path %></center></strong>
 

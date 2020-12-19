@@ -54,8 +54,8 @@ e definir suas categorias, além de atribuir prazos de estudo para monitorar seu
         <td></td>
         <td><%= study_item.status %></td>
         <td></td>
-        <td><strong><%= link_to 'Concluído', concluded_study_item_path(study_item), method: :post %></td></strong>
-        <td><strong><%= link_to 'Pendente', unconcluded_study_item_path(study_item), method: :post %></td></strong>
+        <td><strong><%= link_to 'Marcar como feito', concluded_study_item_path(study_item), method: :post %></td></strong>
+        <td><strong><%= link_to 'Pendente/Revisar', unconcluded_study_item_path(study_item), method: :post %></td></strong>
         <td></td>
         <td></td>
         <td></td>
