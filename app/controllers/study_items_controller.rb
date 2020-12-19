@@ -40,14 +40,14 @@ class StudyItemsController < ApplicationController
 
   def concluded
     @study_item.update(finalized_at: Date.current)
-    @study_item.status = ' ✔ Concluído'
+    @study_item.status = '✔'
     @study_item.save
     redirect_to study_items_path
   end
 
   def unconcluded
     @study_item.update(finalized_at:'')
-    @study_item.status = ' ❌ Pendente'
+    @study_item.status = '❌'
     @study_item.save
     redirect_to study_items_path
   end
@@ -58,6 +58,6 @@ class StudyItemsController < ApplicationController
     end
 
     def study_item_params
-      params.require(:study_item).permit(:title, :category_id, :description, :deadline, :status)
+      params.require(:study_item).permit(:title, :category_id, :description, :deadline, :status, :item_kind)
     end
 end

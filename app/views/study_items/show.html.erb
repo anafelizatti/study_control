@@ -11,6 +11,13 @@
   <%= @study_item.title %>
 </p>
 <p>
+
+<p>
+  <strong>Tipo :</strong>
+  <%= @study_item.item_kind %>
+</p>
+<p>
+
   <strong>Categoria :</strong>
   <%= @study_item.category_id %>
 </p>
@@ -28,9 +35,9 @@
 </p>
 <hr>
 
-<% if @study_item.finalized? && @study_item.status = '✔ Concluído'%>
+<% if @study_item.finalized? && @study_item.status = '✔'%>
 <p>Finalizada em <%= @study_item.finalized_at.strftime('%d/%m/%y') %> </p>
-<% elsif @study_item.status = '❌ Pendente'%>
+<% elsif @study_item.status = '❌'%>
 <%= link_to 'Marcar como feito', concluded_study_item_path(@study_item), method: :post %> </center></strong>
 <% end %> 
 

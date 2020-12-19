@@ -17,6 +17,16 @@
     <%= form.text_field :title, :size=>"28" %>
   </div>
   <br>
+
+  <div class="control-group">
+    <%= form.label "Tipo de item de estudo", class: 'control-label'  %>
+    <br>
+    <%= select("study_item","item_kind",['🎦','📘','📑','💻','🔊','Outro'],  {:prompt => 'Selecione um ícone'}) %>
+    <br>
+  </div>
+    
+  <br>
+  
   <div class="control-group">
     <%= form.label "Categorias",class: 'control-label'  %>
     <div class="controls">

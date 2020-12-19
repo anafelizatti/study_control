@@ -10,15 +10,15 @@ Funcionalidades básicas:
 2. Editar um item de estudo ok.
 3. Apagar um item de estudo ok.
 4. Marcar um item de estudo como feito ok.
-5. Definir um prazo para conclusão de um item de estudo +- 
+5. Definir um prazo para conclusão de um item de estudo ok
 6. Comentar um item de estudo ok
 7. Cadastrar categorias para itens de estudo pré-definidas ok.
 8. Usar categorias em itens de estudo ok.
 
 Bônus:
 
-1. Itens de estudo podem ter um tipo (texto, vídeo, curso)
+1. Itens de estudo podem ter um tipo (texto, vídeo, curso) ok.
 2. Exibir cada tópico de acordo com a data - indicando itens atrasados/futuro
-3. Adicionar ícones para os tipos de itens de estudo
-4. Buscar tópico de estudo ok!
+3. Adicionar ícones para os tipos de itens de estudo ok
+4. Buscar tópico de estudo ok
 5. Login

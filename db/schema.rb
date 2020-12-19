@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_18_231526) do
+ActiveRecord::Schema.define(version: 2020_12_19_125540) do
 
   create_table "study_categories", force: :cascade do |t|
     t.string "title"
@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 2020_12_18_231526) do
     t.string "category_id"
     t.string "status"
     t.date "finalized_at"
+    t.string "item_kind"
   end
 
   add_foreign_key "study_comments", "study_items"
