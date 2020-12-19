@@ -21,4 +21,4 @@ Bônus:
 2. Exibir cada tópico de acordo com a data - indicando itens atrasados/futuro
 3. Adicionar ícones para os tipos de itens de estudo ok
 4. Buscar tópico de estudo ok
-5. Login
+5. Login - Ok, Utilizando a GEM DEVISE 
