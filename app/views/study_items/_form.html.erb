@@ -25,7 +25,7 @@
   </div>
 
   <div class="field">
-    <%= form.label "Prazo" %>
+    <%= form.label "Prazo: (ano/mês/dia)" %>
     </br>
     <%= form.text_field :deadline %>
     <br>
@@ -35,13 +35,6 @@
     <%= form.label "Descrição" %>
     <br>
     <%= form.text_area :description, :size=>"30" %>
-  </div>
-
-  <div class="control-group">
-    <%= form.label "Status", class: 'control-label' %>
-    </br>
-    <%= select("study_item", "status", ['❌ Pendente', '✔ Concluído'], {include_blank: false}) %></td>
-    <br>
   </div>
 
   <div class="actions">

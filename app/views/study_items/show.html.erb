@@ -16,7 +16,7 @@
 </p>
 <p>
   <strong>Prazo :</strong>
-  <%= @study_item.deadline %>
+  <%= @study_item.deadline.strftime("%m/%d/%Y") %>
 </p>
 <p>
   <strong>Descrição :</strong>
@@ -29,7 +29,7 @@
 <hr>
 
 <% if @study_item.finalized? && @study_item.status = '✔ Concluído'%>
-<p>Finalizada em <%= @study_item.finalized_at %> </p>
+<p>Finalizada em <%= @study_item.finalized_at.strftime('%d/%m/%y') %> </p>
 <% elsif @study_item.status = '❌ Pendente'%>
 <%= link_to 'Marcar como feito', concluded_study_item_path(@study_item), method: :post %> </center></strong>
 <% end %> 
