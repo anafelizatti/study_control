@@ -31,9 +31,11 @@ e definir suas categorias, além de atribuir prazos de estudo para monitorar seu
       <td></td>
       <th>Categoria</th>
       <td></td>
+      <th>Descrição</th>
+      <td></td>
       <th>Prazo</th>
       <td></td>
-      <th>Descrição</th>
+      <th>Em dia?</th>
       <td></td>
       <th>Status</th>
       <td></td>
@@ -51,9 +53,11 @@ e definir suas categorias, além de atribuir prazos de estudo para monitorar seu
         <td></td>
         <td><%= study_item.category_id %></td>
         <td></td>
+        <td><%= study_item.description %></td>
+        <td></td>
         <td><%= study_item.deadline.strftime("%d/%m/%Y") %></td>
         <td></td>
-        <td><%= study_item.description %></td>
+        <td><%= study_item.data_check %></td>
         <td></td>
         <td><%= study_item.status %></td>
         <td></td>
