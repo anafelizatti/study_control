@@ -33,15 +33,13 @@
   <%= @study_item.status %>
 </p>
 <hr>
-
-
+<br>
 <% if @study_item.finalized? && @study_item.status = '✔'%>
 <p>Finalizada em <%= @study_item.finalized_at.strftime('%d/%m/%y') %> </p>
 <% elsif @study_item.status = '❌'%>
 <%= link_to 'Marcar como feito', concluded_study_item_path(@study_item), method: :post %> </center></strong>
 <% end %> 
-<br> 
-
+<br>
 <br>
 <% if @study_item.deadline < Date.current && @study_item.status == '❌' %>
 <center><h6 style ="color:red;"> ATENÇÃO: ITEM EM EM ATRASO </h6></center>
